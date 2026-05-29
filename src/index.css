@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid #c69a4b;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(198, 154, 75, 0.18);
+}
+
+@layer components {
+  .ath-section-container {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+  }
+
+  .ath-section-heading {
+    margin-bottom: 3rem;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    font-weight: 900;
+  }
+
+  .ath-btn-primary,
+  .ath-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition:
+      transform 300ms ease,
+      background-color 300ms ease,
+      border-color 300ms ease,
+      color 300ms ease,
+      box-shadow 300ms ease;
+  }
+
+  .ath-btn-primary {
+    background-color: #c69a4b;
+    color: #000;
+    padding: 1rem 2rem;
+    box-shadow: 0 10px 15px -3px rgba(198, 154, 75, 0.3);
+  }
+
+  .ath-btn-outline {
+    border: 1px solid #c69a4b;
+    color: #c69a4b;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .ath-btn-primary:hover,
+  .ath-gold-hover:hover {
+    background-color: #d4b16f;
+    transform: translateY(-2px);
+  }
+
+  .ath-btn-outline:hover {
+    background-color: #c69a4b;
+    color: #000;
+    transform: translateY(-2px);
+  }
+
+  .ath-premium-shadow {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 1);
+  }
+
+  .ath-premium-card {
+    border-radius: 32px;
+    border: 1px solid rgba(198, 154, 75, 0.35);
+    background-color: #111111;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 1);
+  }
+
+  .ath-product-card {
+    border-radius: 1.5rem;
+    border: 1px solid rgba(198, 154, 75, 0.6);
+    background-color: #111111;
+    box-shadow: 0 25px 50px -12px rgba(198, 154, 75, 0.1);
+    transition:
+      transform 300ms ease,
+      border-color 300ms ease,
+      box-shadow 300ms ease;
+  }
+
+  .ath-product-card:hover {
+    border-color: #c69a4b;
+    box-shadow: 0 24px 60px rgba(198, 154, 75, 0.2);
+    transform: translateY(-0.25rem);
+  }
+
+  @media (min-width: 640px) {
+    .ath-section-heading {
+      font-size: 2.25rem;
+    }
+  }
+}
